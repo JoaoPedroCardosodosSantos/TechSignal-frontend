@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  /* Light theme - Purple tech tones */
+  :root {
+    --background: 270 20% 98%;
+    --foreground: 270 10% 10%;
+    --card: 270 20% 96%;
+    --card-foreground: 270 10% 10%;
+    --popover: 270 20% 98%;
+    --popover-foreground: 270 10% 10%;
+    --primary: 270 70% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 270 15% 90%;
+    --secondary-foreground: 270 10% 20%;
+    --muted: 270 10% 92%;
+    --muted-foreground: 270 5% 45%;
+    --accent: 280 80% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 270 15% 85%;
+    --input: 270 15% 88%;
+    --ring: 270 70% 55%;
+    --chart-1: 270 70% 55%;
+    --chart-2: 280 60% 50%;
+    --chart-3: 260 50% 45%;
+    --chart-4: 290 65% 60%;
+    --chart-5: 250 75% 55%;
+    --radius: 0.75rem;
+  }
+
+  /* Dark theme - Purple tech tones (default) */
+  .dark {
+    --background: 270 25% 6%;
+    --foreground: 270 5% 95%;
+    --card: 270 20% 10%;
+    --card-foreground: 270 5% 95%;
+    --popover: 270 20% 8%;
+    --popover-foreground: 270 5% 95%;
+    --primary: 270 70% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 270 20% 15%;
+    --secondary-foreground: 270 5% 90%;
+    --muted: 270 15% 18%;
+    --muted-foreground: 270 5% 60%;
+    --accent: 280 75% 65%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 270 15% 20%;
+    --input: 270 15% 18%;
+    --ring: 270 70% 60%;
+    --chart-1: 270 70% 60%;
+    --chart-2: 280 60% 55%;
+    --chart-3: 260 50% 50%;
+    --chart-4: 290 65% 65%;
+    --chart-5: 250 75% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out forwards;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.5s ease-out forwards;
+}
