@@ -7,8 +7,12 @@ const nextConfig = {
     remotePatterns: [
     {
       protocol: 'https',
-      hostname: 'api.techsignal.com',
+      hostname: 'api.techsignal.com', // Modificar com o caminho da API do backend
     },
+    {
+      protocol: 'https',
+      hostname: 'images.unsplash.com',
+    }
   ],
 
   },
